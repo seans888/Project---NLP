@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/templates/homepage-nologin.xhtml">
+
+    <ui:define name="title">Timeline</ui:define>
+    <ui:define name="content">
+        <div class="mainbody container-fluid">
+        <div class="col-lg-4 col-md-3 hidden-sm hidden-xs">
+        <div class="panel panel-default">
+        <div class="panel-body">
+        <div class="media">
+        <h:head>
+            <title>Sign up</title>
+        </h:head>
+
+
+            <h:form id="registerForm">
+            <table>
+                <tr>
+                    <td><h:outputText value="Enter Your Username:" /></td>
+                    <td> <h:inputText span="6" class="form-control" placeholder="Username" id="uname" value="#{post.userName}"
+                        required="true" requiredMessage="Please enter your first name" />
+                    </td>
+                    <td><h:message for="uname" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Enter Your Full Name:" /></td>
+                    <td><h:inputText span="6" class="form-control" placeholder="Fullname" id="fname" value="#{post.userFull}"
+                                       required="true" requiredMessage="Please enter your Full Name" /></td>
+                    <td><h:message for="fname" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Enter Your email ID:" /></td>
+                    <td><h:inputText type="email" span="6" class="form-control" placeholder="Email" id="email" value="#{post.userEmail}"
+                        required="true" requiredMessage="Please enter your email id" /></td>
+                    <td><h:message for="email" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Enter Your Gender:" /></td>
+                    <td><h:inputText span="6" class="form-control" placeholder="Email" id="gender" value="#{post.gender}"
+                                     required="true" requiredMessage="Please enter your gender" /></td>
+                    <td><h:message for="gender" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Enter Your Date of Birth:" /></td>
+                    <td><h:inputText span="6" class="form-control" placeholder="Email" id="bday" value="#{post.bday}"
+                                     required="true" requiredMessage="Please enter your date of birth" /></td>
+                    <td><h:message for="bday" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Enter Password :" /></td>
+                    <td><h:inputSecret span="6" class="form-control" placeholder="Password" id="psw" value="#{post.userPass}"
+                                       required="true" requiredMessage="Please enter your password" /></td>
+                    <td><h:message for="psw" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td />
+                    <td><h:commandButton value="Register" action="#{post.signUp}" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLink value="Index.jsf">Home</h:outputLink></td>
+                </tr>
+            </table>
+            </h:form>
+
+</div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </ui:define>
+</ui:composition>

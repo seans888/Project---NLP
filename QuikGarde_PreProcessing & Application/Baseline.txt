@@ -1,0 +1,126 @@
+				BasedLine - Softdev Accomplishments
+
+
+*# of Data- 1000k ( 500 Test (96/3), 1000 Training)
+
+				*SMO - 10 Cross fold Validation Experiments
+50 Data
+
+200 Data
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          99               49.5    %
+Incorrectly Classified Instances       101               50.5    %
+Kappa statistic                          0.1571
+Mean absolute error                      0.3678
+Root mean squared error                  0.4683
+Relative absolute error                 90.5507 %
+Root relative squared error            103.9762 %
+Total Number of Instances              200     
+
+=== Detailed Accuracy By Class ===
+
+                 		TP Rate  FP Rate  	Precision  	Recall   F-Measure  	MCC      ROC Area  	PRC Area 	 Class
+              		  0.462   	0.299    	0.573      	 0.462    0.512      	0.168    0.594    	 0.523     	C
+               		  0.696    	0.446    	0.505     	 0.696    0.585      	0.245    0.637     	0.479     	NC
+              		  0.036  	0.087   	 0.063      	 0.036    0.045      	-0.066   0.473     	0.134     	AC
+Weighted Avg.   	  0.495   	0.328   	 0.475      	 0.495    0.476      	0.166    0.594    	0.451     
+
+500 Data
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         268               53.6    %
+Incorrectly Classified Instances       232               46.4    %
+Kappa statistic                          0.2152
+Mean absolute error                      0.3684
+Root mean squared error                  0.4684
+Relative absolute error                 90.2842 %
+Root relative squared error            103.7238 %
+Total Number of Instances              500     
+
+=== Detailed Accuracy By Class ===
+
+                 		TP Rate  FP Rate  	Precision  	Recall  	F-Measure  MCC      ROC Area 	 PRC Area 	 Class
+                 		0.535    	0.256    	0.612      	0.535    	0.571      	   0.285   	 0.630     	0.528     	 C
+                 		0.701   	 0.444   	0.542     	0.701    	0.611      	   0.256    	0.632    	0.512    	 NC
+                 		0.042    	0.075    	0.086     	0.042    	0.057      	  -0.044   	0.438    	0.136    	 AC
+Weighted Avg.    	0.536    	0.311    	0.507     	0.536    	0.515     	   0.226    	0.603     	0.466     
+
+700 Data
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         382               54.5714 %
+Incorrectly Classified Instances       318               45.4286 %
+Kappa statistic                          0.2312
+Mean absolute error                      0.3667
+Root mean squared error                  0.4666
+Relative absolute error                 89.7162 %
+Root relative squared error            103.2291 %
+Total Number of Instances              700     
+
+=== Detailed Accuracy By Class ===
+
+                 		TP Rate  FP Rate  Precision  	Recall   F-Measure 	 MCC      ROC Area  PRC Area  	Class
+                		 0.516    0.241    	0.584      	0.516    0.548      	0.282    	0.628     0.497     	C
+                 		 0.722    0.432    	0.585     	0.722    0.646      	0.292    	0.648     0.554     	NC
+                 		0.078    0.087    	0.133    	 0.078    0.098      	-0.012   	0.477     0.143     	AC
+Weighted Avg.    	0.546    0.306    	0.518     	 0.546    0.527      	0.243    	0.615     0.471     
+
+1000 Data
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         521               57.8889 %
+Incorrectly Classified Instances       379               42.1111 %
+Kappa statistic                          0.2294
+Mean absolute error                      0.3553
+Root mean squared error                  0.4538
+Relative absolute error                 90.3291 %
+Root relative squared error            102.3487 %
+Total Number of Instances              900     
+
+=== Detailed Accuracy By Class ===
+
+                 		TP Rate  FP Rate  Precision  	Recall   F-Measure  MCC      	ROC Area  PRC Area  	Class
+                 		0.451    	0.176    0.558      	0.451    0.499      	0.293    	0.637     	0.445     	C
+                 		0.797    	0.531    0.630      	0.797    0.704      	0.283    	0.636     	0.613     	NC
+                 		0.048    	0.063    0.109      	0.048    0.067      	-0.022   	0.480     	0.134     	AC
+Weighted Avg.    	0.579    	0.349    0.534      	0.579    0.548      	0.244    	0.615     	0.491     
+
+*Emoticons, Other Language (like Korean, Chinese Language that cant read), Special Characters Are DELETED
+*Unigram
+*Frequency for the values
+*Statements are Annotated by different person (1000 statements are identified by random APC student, 1000 statements are identified by the Researchers)
+
+*Classification Of Cyberbullying:
+
+Part1 of Classification was based on HARMFULLNESS of the words 0, 1, and 2 out of 625 statements using BRAT and GATE
+
+results:
+	0 = 215 or 33% statement was classified as Not Cyberbullying out of 625
+	1 = 250 or 41% statement was classified as Ambiguous Cyberbullying out of 625
+	2 = 160 or 26%  statement was classified as Cyberbullying out of 625
+
+Part2 of Classification was Sexuality, Physical Apperance, Intelligence, Race and Culture, Social Rejection, and Bad Description
+
+results:
+	Bad Description	=122 or 27%
+	Intelligence	=76 or 16%
+	Physical Apperance	=73 or 10%
+	Race and Culture	=36 or 8%
+	Sexuality		=60 or 13%
+	Social Rejection	=83 or 18%
+
+
+
+
+
+*Some statements cannot be detect because of lack of training.
+*Some training data can increase its improvement but also in some point it can also damange,such as the following:
+	-Adding some statements(possible effect, it can damage the training data by its interpretation of the system to the new added data) vice versa if your going to remove some statements.
+	-Problems in Attribute
+	-Problems on Preprocessing
+	-Problems on Data (the more data added which is more on not important statement such as not cyberbullying, so hindi matutu lalo yung system.)

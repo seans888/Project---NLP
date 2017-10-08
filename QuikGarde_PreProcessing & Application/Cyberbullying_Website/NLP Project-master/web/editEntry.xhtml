@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/templates/header-footer.xhtml">
+
+    <ui:define name="title">Timeline</ui:define>
+
+    <ui:define name="content">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <div class="panel panel-default">
+                <h:form>
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img class="media-object img-circle" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="50x" height="50x" style="margin-left:3px; margin-right:-5px;"></img>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <!--<h:dataTable value="#{post.entryAuthor}" var="userEntry">
+                                        </h:dataTable> -->
+                                <h3>Title</h3>
+                                <h:outputText value="#{post.entryTitle}" styleClass="form-control input-lg" label="Post Title" required="true" validatorMessage="Title is required" placeholder="Title"></h:outputText><br />
+                                <h3>Content</h3>
+                                <h:inputTextarea value="#{post.userEntry}" styleClass="form-control" required="true" validatorMessage="No entry" rows="15"></h:inputTextarea>
+                                <br />
+                                <h:commandButton action="#{post.editPost}" styleClass="btn btn-primary btn-lg" value="Update"></h:commandButton>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Post #1 -->
+                    <!--    <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="pull-left">
+                                    <a href="#">
+                                        <img class="media-object img-circle" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;"></img>
+                                    </a>
+                                </div>
+                                <h4><a href="#" style="text-decoration:none;"><strong>User 1</strong></a><small><small><a href="#" style="text-decoration:none; color:grey;"></a></small></small></h4>
+                                 Post content -->
+                    <!-- <br />
+                     <div class="post-content well">
+
+                     </div>
+                 </div>
+             </div> -->
+                </h:form>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
+
+
