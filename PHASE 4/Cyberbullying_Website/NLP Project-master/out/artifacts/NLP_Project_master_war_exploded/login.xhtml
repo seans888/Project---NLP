@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/templates/homepage-nologin.xhtml">
+    <ui:define name="title"> Login</ui:define>
+    <ui:define name="content">
+        <div class="mainbody container-fluid">
+        <div class="col-lg-4 col-md-3 hidden-sm hidden-xs">
+        <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="media">
+        <h1>Login</h1>
+        <h:form id="loginForm">
+            <table frame="box">
+                <tr>
+                    <th>Login Page</th>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Enter Your Full Name : " /></td>
+                    <td><h:inputText id="inputFull" value="#{post.userFull}"
+                                     required="true" requiredMessage="Name field must not be empty" />
+                    </td>
+                    <td><h:message for="inputFull" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Enter Your Username : " /></td>
+                    <td><h:inputText id="inputName" value="#{post.userName}"
+                                     required="true" requiredMessage="Username field         must not be empty" />
+                    </td>
+                    <td><h:message for="inputName" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Enter password :" /></td>
+                    <td><h:inputSecret id="inputPassword" value="#{post.userPass}"
+                                       required="true"
+                                       requiredMessage="Password field must not be empty" /></td>
+                    <td><h:message for="inputPassword" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:commandButton value="Sign In" action="#{post.validateUsernamePassword}" /></td>
+                    <td><h:outputText value="Not a User " />
+                        <h:outputLink value="register.jsf">Sign Up</h:outputLink>
+                    </td>
+                </tr>
+            </table>
+        </h:form>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </ui:define>
+</ui:composition>

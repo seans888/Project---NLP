@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+        <html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://xmlns.jcp.org/jsf/core"
+        xmlns:c="http://java.sun.com/jsp/jstl/core">
+<head>
+    <meta charset="utf-8"></meta>
+    <title>QuickGarde</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"></link>
+    <style type="text/css">
+        .mainbody {
+            background:#3c4451;;
+        }
+        body {
+            background-color: #3c4451;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="net.bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+<h:body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css"></link>
+    <nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+        <a class="navbar-brand text-muted" href="#">QG</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li class="text-muted"><a href="#">Cyberbullying</a></li>
+        </ul>
+        <ul class="nav pull-right">
+            <li class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Options
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="timeline2.jsf">Posts</a></li>
+                    <li><a href="index.jsf">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="mainbody container-fluid">
+        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="media">
+                        <div align="center">
+                            <img class="thumbnail img-responsive" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="300px" height="300px"></img>
+                        </div>
+                        <div class="media-body">
+                            <h3><strong>#{post.userFull} </strong></h3>
+                            <h4>#{post.userName}</h4>
+                            <p><span>status</span></p>
+                            <p><span class="glyphicon glyphicon-gender"></span> #{post.gender}</p>
+                            <p><span class="glyphicon glyphicon-gift"></span>#{post.bday} </p>
+                        </div>
+
+                        <!-- <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="pull-left">
+                                    <ui:insert name="content"></ui:insert>
+                                    <div class="footer-bottom">
+                                        <div class="container">
+                                            <p class="pull-left">test </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ui:insert name="content"></ui:insert>
+    </div>
+</h:body>
+</html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/templates/header-footer.xhtml">
+
+    <ui:define name="title">Timeline</ui:define>
+
+    <ui:define name="content">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+        <div class="row">
+                <div class="panel-body">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#posts" data-toggle="tab">Timeline</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <!--Posts-->
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="posts">
+                            <h:form>
+                                <div class="table-responsive">
+                                    <h:dataTable value="#{post.authorEntry}" var="userEntry">
+                                        <h:column>
+                                            <div class="panel-group">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-body">
+                                                        <h3><b>#{userEntry.title}</b></h3>
+                                                        <br></br>
+                                                        #{userEntry.blogPost}
+                                                        <br></br>
+                                                        <h:commandLink action="#{post.delete(userEntry.id)}" value="Delete"  styleClass="btn btn-danger btn-sm" rendered="#{post.userName == userEntry.author}"> </h:commandLink>
+                                                        <h:commandLink action="#{post.edit(userEntry.id, userEntry.title,userEntry.blogPost)}" value="Edit"  styleClass="btn btn-danger btn-sm" rendered="#{post.userName == userEntry.author}"> </h:commandLink>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </h:column>
+                                    </h:dataTable>
+                                </div>
+                            </h:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="panel panel-default">
+        <div class="panel-body">
+        <div class="pull-left">
+
+                <h:form>
+                    <div class="container">
+                    <h:commandButton action="timeline2" styleClass="btn btn-primary btn-lg" value="Add New Entry"></h:commandButton>
+                  <h:commandButton action="#{attribute.testFunc()}" styleClass="btn btn-primary btn-lg" value="Scan page"></h:commandButton>
+                    </div>
+                </h:form>
+            </div>
+        </div>
+            </div>
+        </div>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+    </ui:define>
+</ui:composition>
+
+
